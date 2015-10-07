@@ -1,0 +1,13 @@
+# Sequential Logic ReadMe
+
+Step 1: Click the ‘Run’ button in Eclipse or your Java IDE equivalent in order to start using testing script for the chipClass class.
+Step 2: You will be presented with a dialog box that contains instructions for that current dialog box. The first dialog box or menu should present either option 1: ‘Assignment 1 gates’ , option 2: ‘Assignment 2 gates’ or option 3: 'Assignment 3 Memory tests'. Type the correct number corresponding to the correct assignment gate list in the white rectangular input box and click the ‘OK’ button to submit and move forward to the next menu.
+Step 3: Once you have completed step 2 you will be presented with a similar menu , specify the gate you would like to test from the assignment option chosen in step 2 and click ‘OK’ to advance further.
+Step 4: Depending on the gate chosen you will be presented a series of dialog boxes that allow you to enter the parameters that are needed for that gate. The single input requires only one integer value be submitted and the array parameter requires a specified amount of integer that are separated by commas (do not include the brackets for the array, an example will be given to you in the dialog box). Click ‘OK’ to advance to your result. 
+
+* In the case of the memory tests you will be presented with two options 'Add a register' and 'View registers' once you Add or View you will be brought back to the gates menu and your action will be saved so after adding a register you may test the memory option (eg RAM8 ) by specifying your gate again and choosing the view all gates option to see that your addition was made at the correct position.
+Result: Your result will either appear in the console or in a dialog box.
+* In the case of the DFF and Bit tests a random generation of tests will occur and your results will be presented in the console and a dialog box will pop up with a 'stop' button that is used to end the specified test. The PC test works similarily to the DFF and Bit. However, an additional four buttons will be provided 'in'( the value stored as the PC input can be entered here after clicking ) ,'reset','load','inc'. The other buttons are toggles and will swith between 1 and 0 upon click for testing.  
+You may click the ‘Exit’ to leave the testing system from the main menu and the ‘Back’ button to return to the previous menu.
+
+# For the 4K and 16K Ram testing you will be presented with a large amount of arrays and the console buffer size will not show all of them so before testing these two change your console preferences to ' Unlimited buffering '. In Eclipse you can do so by right clicking in the console and clicking 'preferences' then unchecking 'limit console output' and you should now be able to view all of your arrays. 
