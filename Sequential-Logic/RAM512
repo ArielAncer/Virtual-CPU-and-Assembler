@@ -1,0 +1,47 @@
+import java.util.Arrays;
+
+public class RAM512 extends chipClass2 {
+
+	public RAM64[] RAM512;
+
+	public RAM512() {
+		RAM512 = new RAM64[8];
+
+		for (int i = 0; i < 8; i++) {
+			RAM512[i] = new RAM64();
+		}
+
+	}
+
+	public void setRAM512(int in[], int load, int[] sel) {
+		int[] vals = dmux8way(load, Arrays.copyOfRange(sel, 6, 9));
+		for (int i = 0; i < 8; i++) {
+			RAM512[i].setRAM64(in, vals[i], Arrays.copyOfRange(sel, 0, 6));
+		}
+
+	}
+
+	public int[] getRAM512(int[] sel) {
+		return mux8way16(RAM512[0].getRAM64(sel), RAM512[1].getRAM64(sel),
+				RAM512[2].getRAM64(sel), RAM512[3].getRAM64(sel),
+				RAM512[4].getRAM64(sel), RAM512[5].getRAM64(sel),
+				RAM512[6].getRAM64(sel), RAM512[7].getRAM64(sel),
+				Arrays.copyOfRange(sel, 6, 9));
+	}
+
+	public void printAll() {
+
+		System.out.println("\n\t\t  --=RAM512=--");
+		for (int i = 0; i < 8; i++) {
+			for (int j = 0; j < 8; j++) {
+				for (int k = 0; k < 8; k++) {
+					System.out
+							.println(Arrays.toString(RAM512[k].RAM64[j].RAM8[i]
+									.getRegister()));
+				}
+			}
+		}
+
+	}
+
+}
